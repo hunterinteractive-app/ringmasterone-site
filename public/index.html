@@ -8,6 +8,11 @@
     name="description"
     content="RingMaster One is the all-in-one platform for rabbit and cavy shows, clubs, and breeders."
   />
+  <meta property="og:title" content="RingMaster One" />
+  <meta property="og:description" content="The all-in-one platform for rabbit and cavy shows, clubs, and breeders." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ringmasterone.com" />
+  <meta property="og:image" content="RingMaster One Logo.png" />
   <style>
     :root {
       --navy: #11285a;
@@ -122,7 +127,7 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.1fr;
       gap: 30px;
       align-items: center;
     }
@@ -220,49 +225,6 @@
       border: 1px solid rgba(17, 40, 90, 0.10);
       color: var(--navy);
       font-weight: 700;
-    }
-
-    .hero-panel {
-      background: linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.78) 100%);
-      border: 1px solid rgba(17,40,90,0.10);
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-      padding: 28px;
-    }
-
-    .hero-panel h3 {
-      margin: 0 0 8px;
-      font-size: 1.4rem;
-      color: var(--navy);
-    }
-
-    .hero-panel p {
-      margin: 0 0 18px;
-      color: var(--muted);
-    }
-
-    .mini-stack {
-      display: grid;
-      gap: 14px;
-    }
-
-    .mini-card {
-      background: linear-gradient(135deg, #ffffff 0%, #f6f8fc 100%);
-      border: 1px solid rgba(17,40,90,0.08);
-      border-radius: 18px;
-      padding: 18px;
-    }
-
-    .mini-card strong {
-      display: block;
-      color: var(--navy);
-      font-size: 1rem;
-      margin-bottom: 4px;
-    }
-
-    .mini-card span {
-      color: var(--muted);
-      font-size: 0.96rem;
     }
 
     .section {
@@ -484,7 +446,6 @@
     }
 
     @media (max-width: 1050px) {
-      .hero-grid,
       .products,
       .ecosystem-grid {
         grid-template-columns: 1fr;
@@ -492,14 +453,6 @@
 
       .hero {
         padding-top: 36px;
-      }
-
-      .hero-copy {
-        order: 1;
-      }
-
-      .hero-panel {
-        order: 2;
       }
     }
 
@@ -522,7 +475,6 @@
         width: 100%;
       }
 
-      .hero-panel,
       .product-body,
       .product-top,
       .ecosystem,
@@ -546,6 +498,7 @@
       <nav class="nav-links">
         <a href="#products">Products</a>
         <a href="#ecosystem">Ecosystem</a>
+        <a href="#connect">Contact</a>
         <a class="nav-cta" href="https://show.ringmasterone.com">Open Show</a>
       </nav>
     </div>
@@ -576,30 +529,6 @@
             <span class="pill">One connected ecosystem</span>
           </div>
         </div>
-
-        <aside class="hero-panel">
-          <h3>RingMaster One Platform</h3>
-          <p>
-            A branded home base for your software ecosystem with each product living under its own subdomain.
-          </p>
-
-          <div class="mini-stack">
-            <div class="mini-card">
-              <strong>show.ringmasterone.com</strong>
-              <span>Live show software, online entries, exhibitor tools, and event information.</span>
-            </div>
-
-            <div class="mini-card">
-              <strong>breeder.ringmasterone.com</strong>
-              <span>Future breeder-focused platform for pedigrees, herd management, and records.</span>
-            </div>
-
-            <div class="mini-card">
-              <strong>club.ringmasterone.com</strong>
-              <span>Future club administration platform for memberships, communication, and management.</span>
-            </div>
-          </div>
-        </aside>
       </div>
     </section>
 
@@ -608,7 +537,7 @@
         <div class="section-heading">
           <h2>One brand. Three connected products.</h2>
           <p>
-            Start with RingMaster Show today, then expand the ecosystem as RingMaster Breeder and RingMaster Club launch.
+            Start with RingMaster Show today, then expand into RingMaster Breeder and RingMaster Club when they launch.
           </p>
         </div>
 
@@ -619,7 +548,7 @@
             </div>
 
             <div class="product-body">
-              <span class="badge badge-live">Available Now</span>
+              <span class="badge badge-live">Releasing Soon</span>
               <p>
                 Your show platform for online entries, show information, exhibitor access, and event-focused tools.
               </p>
@@ -630,9 +559,7 @@
                 <li>Exhibitor-friendly experience</li>
               </ul>
 
-              <a class="product-link live" href="https://show.ringmasterone.com">
-                Go to RingMaster Show
-              </a>
+              <div class="product-link soon">Coming Soon</div>
             </div>
           </article>
 
@@ -656,9 +583,7 @@
                 <li>Breeder-focused organization</li>
               </ul>
 
-              <a class="product-link soon" href="https://breeder.ringmasterone.com">
-                breeder.ringmasterone.com
-              </a>
+              <div class="product-link soon">Coming Soon</div>
             </div>
           </article>
 
@@ -682,15 +607,13 @@
                 <li>Organization management</li>
               </ul>
 
-              <a class="product-link soon" href="https://club.ringmasterone.com">
-                club.ringmasterone.com
-              </a>
+              <div class="product-link soon">Coming Soon</div>
             </div>
           </article>
         </div>
 
         <div id="ecosystem" class="ecosystem">
-          <h3>The RingMaster One ecosystem</h3>
+          <h3>The RingMaster One Family</h3>
           <p>
             Each platform has its own role, but together they create a stronger connected experience across the rabbit and cavy community.
           </p>
@@ -710,7 +633,54 @@
             </div>
             <div class="eco-item">
               <strong>Unified Brand</strong>
-              <span>Bring everything together under RingMaster One with clean subdomain-based structure.</span>
+              <span>Bring everything together under RingMaster One.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="connect" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Connect With RingMaster One</h2>
+          <p>
+            Have questions, partnership ideas, or want to learn more about the platform?
+          </p>
+        </div>
+
+        <div class="products">
+          <div class="product-card">
+            <div class="product-body">
+              <h3>Contact Us</h3>
+              <p>
+                For support, partnerships, and questions about RingMaster One.
+              </p>
+              <a class="product-link live" href="mailto:support@ringmasterone.com">
+                support@ringmasterone.com
+              </a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-body">
+              <h3>Follow Us on Facebook</h3>
+              <p>
+                Follow development updates, feature announcements, and release news.
+              </p>
+              <a class="product-link live" href="https://www.facebook.com/profile.php?id=61586420124814" target="_blank" rel="noopener noreferrer">
+                RingMaster One on Facebook
+              </a>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-body">
+              <h3>Built by Hunter Interactive</h3>
+              <p>
+                RingMaster One is part of the Hunter Interactive software ecosystem built for the rabbit and cavy community.
+              </p>
+              <div class="product-link soon">More to Come</div>
             </div>
           </div>
         </div>
@@ -724,11 +694,14 @@
         <div>
           <div class="footer-brand">RingMaster One</div>
           <div>The all-in-one platform for shows, clubs & breeders.</div>
+          <div style="margin-top: 6px;">Built by Hunter Interactive</div>
         </div>
 
         <div>
-          <strong>Live now:</strong>
-          <a href="https://show.ringmasterone.com">show.ringmasterone.com</a>
+          <div><strong>© 2026 RingMaster One. All rights reserved.</strong></div>
+          <div style="margin-top: 6px;">
+            <a href="mailto:support@ringmasterone.com">support@ringmasterone.com</a>
+          </div>
         </div>
       </div>
     </div>
