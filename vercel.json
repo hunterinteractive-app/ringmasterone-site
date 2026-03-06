@@ -1,6 +1,5 @@
+cat > vercel.json <<'EOF'
 {
-  "cleanUrls": true,
-  "routes": [
-    { "src": "/", "dest": "/index.html" }
-  ]
+  "outputDirectory": "public"
 }
+EOF
