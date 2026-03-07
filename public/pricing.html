@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RingMaster One | Pricing</title>
+<meta name="description" content="Simple pricing for RingMaster Show." />
+
+<style>
+:root{
+--navy:#11285a;
+--navy-dark:#0b1c43;
+--gold:#d4a623;
+--purple:#4c2394;
+--text:#1b2440;
+--muted:#5a6687;
+--bg:#eef2f8;
+--white:#ffffff;
+--shadow:0 18px 45px rgba(17,40,90,.12);
+--radius:22px;
+--max:1100px;
+}
+
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+color:var(--text);
+background:linear-gradient(180deg,#f7f9fc 0%,#eef2f8 100%);
+}
+
+.container{
+width:min(var(--max),92%);
+margin:auto;
+}
+
+header{
+background:white;
+border-bottom:1px solid rgba(0,0,0,.06);
+}
+
+.header-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:16px 0;
+}
+
+.brand{
+font-weight:900;
+color:var(--navy);
+}
+
+nav a{
+margin-left:20px;
+font-weight:700;
+color:var(--navy);
+text-decoration:none;
+}
+
+.hero{
+padding:60px 0 30px;
+text-align:center;
+}
+
+.hero h1{
+font-size:42px;
+margin:0 0 10px;
+color:var(--navy);
+}
+
+.hero p{
+color:var(--muted);
+max-width:700px;
+margin:auto;
+}
+
+.pricing{
+padding:40px 0 70px;
+}
+
+.pricing-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+}
+
+.card{
+background:white;
+padding:28px;
+border-radius:var(--radius);
+box-shadow:var(--shadow);
+display:flex;
+flex-direction:column;
+}
+
+.badge{
+font-size:12px;
+font-weight:800;
+padding:6px 10px;
+border-radius:999px;
+background:#f0f3ff;
+color:var(--purple);
+width:fit-content;
+margin-bottom:10px;
+}
+
+.plan{
+font-size:22px;
+font-weight:900;
+margin-bottom:4px;
+color:var(--navy);
+}
+
+.price{
+font-size:38px;
+font-weight:900;
+margin-bottom:4px;
+}
+
+.sub{
+color:var(--muted);
+margin-bottom:18px;
+}
+
+ul{
+padding-left:18px;
+margin-bottom:22px;
+}
+
+ul li+li{margin-top:8px}
+
+button{
+margin-top:auto;
+background:linear-gradient(135deg,var(--navy),var(--navy-dark));
+color:white;
+border:0;
+border-radius:14px;
+padding:14px;
+font-weight:800;
+cursor:pointer;
+}
+
+.billing{
+padding-bottom:70px;
+}
+
+.billing-box{
+background:white;
+padding:30px;
+border-radius:var(--radius);
+box-shadow:var(--shadow);
+max-width:700px;
+margin:auto;
+}
+
+.field{
+margin-bottom:16px;
+}
+
+label{
+display:block;
+font-weight:700;
+margin-bottom:6px;
+}
+
+input,select,textarea{
+width:100%;
+padding:12px;
+border-radius:10px;
+border:1px solid rgba(0,0,0,.15);
+font:inherit;
+}
+
+textarea{min-height:100px}
+
+.summary{
+background:#f7f9fc;
+padding:16px;
+border-radius:14px;
+margin-top:16px;
+}
+
+.summary-row{
+display:flex;
+justify-content:space-between;
+padding:6px 0;
+}
+
+.summary-row.total{
+border-top:1px solid rgba(0,0,0,.1);
+margin-top:8px;
+padding-top:12px;
+font-weight:900;
+}
+
+footer{
+padding:40px 0;
+text-align:center;
+color:var(--muted);
+}
+
+@media(max-width:800px){
+.pricing-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container header-inner">
+<div class="brand">RingMaster One</div>
+<nav>
+<a href="#pricing">Pricing</a>
+<a href="#checkout">Checkout</a>
+<a href="mailto:support@ringmasterone.com">Support</a>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+<h1>Simple pricing for RingMaster Show</h1>
+<p>
+Every plan includes the full RingMaster Show feature set. Pricing only changes based on the number of show days.
+</p>
+</div>
+</section>
+
+<section id="pricing" class="pricing">
+<div class="container">
+
+<div class="pricing-grid">
+
+<div class="card">
+<div class="badge">Pay As You Go</div>
+<div class="plan">Single Show Day</div>
+<div class="price">$50</div>
+<div class="sub">per show day</div>
+
+<ul>
+<li>Unlimited ARBA numbers</li>
+<li>One show day</li>
+<li>2% processing fee on each entry</li>
+<li>Online entry system</li>
+<li>Show information page</li>
+<li>Exhibitor access tools</li>
+<li>Email support</li>
+</ul>
+
+<button>Select Plan</button>
+</div>
+
+<div class="card">
+<div class="badge">Flexible</div>
+<div class="plan">Up to 4 Show Days</div>
+<div class="price">$150</div>
+<div class="sub">per year • up to 4 show days</div>
+
+<ul>
+<li>Unlimited ARBA numbers</li>
+<li>Up to 4 show days per year</li>
+<li>2% processing fee on each entry</li>
+<li>Online entry system</li>
+<li>Show information page</li>
+<li>Exhibitor access tools</li>
+<li>Email support</li>
+</ul>
+
+<button>Select Plan</button>
+</div>
+
+<div class="card">
+<div class="badge">Best Value</div>
+<div class="plan">Unlimited Shows</div>
+<div class="price">$250</div>
+<div class="sub">per year • unlimited events</div>
+
+<ul>
+<li>Unlimited ARBA numbers</li>
+<li>Unlimited shows</li>
+<li>2% processing fee on each entry</li>
+<li>Online entry system</li>
+<li>Show information page</li>
+<li>Exhibitor access tools</li>
+<li>Email support</li>
+</ul>
+
+<button>Select Plan</button>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="checkout" class="billing">
+<div class="container">
+
+<div class="billing-box">
+<h2>Checkout</h2>
+<p>Complete your subscription to start using RingMaster Show.</p>
+
+<div class="field">
+<label>Club or Organization</label>
+<input type="text" placeholder="Example Rabbit Breeders Association" />
+</div>
+
+<div class="field">
+<label>Show Secretary Name</label>
+<input type="text" placeholder="Jane Doe" />
+</div>
+
+<div class="field">
+<label>Show Secretary Email</label>
+<input type="email" placeholder="secretary@example.com" />
+</div>
+
+<div class="field">
+<label>Contact Name</label>
+<input type="text" placeholder="John Smith" />
+</div>
+
+<div class="field">
+<label>Email Address</label>
+<input type="email" placeholder="john@example.com" />
+</div>
+
+<div class="field">
+<label>Plan</label>
+<select>
+<option>Unlimited Shows — $250/year</option>
+<option>Up to 4 Show Days — $150/year</option>
+<option>Single Show Day — $50/day</option>
+</select>
+</div>
+
+<div class="summary">
+<div class="summary-row"><span>Plan</span><span>$250.00</span></div>
+<div class="summary-row"><span>Tax</span><span>Calculated at checkout</span></div>
+<div class="summary-row total"><span>Total</span><span>$250.00</span></div>
+</div>
+
+<button>Continue to Secure Checkout</button>
+
+</div>
+
+</div>
+</section>
+
+<footer>
+<div class="container">
+<p>© 2026 RingMaster One • Powered by Hunter Interactive</p>
+</div>
+</footer>
+
+</body>
+</html>
