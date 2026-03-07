@@ -127,13 +127,16 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr;
+      grid-template-columns: 1fr;
       gap: 30px;
       align-items: center;
     }
 
     .hero-copy {
       padding: 10px 0;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
     .eyebrow {
@@ -151,7 +154,7 @@
 
     .hero-logo {
       width: min(680px, 100%);
-      margin-bottom: 18px;
+      margin: 0 auto 18px auto;
       filter: drop-shadow(0 12px 28px rgba(17,40,90,0.10));
     }
 
@@ -166,7 +169,7 @@
       font-size: 1.12rem;
       color: var(--muted);
       max-width: 700px;
-      margin: 0 0 28px;
+      margin: 0 auto 28px;
     }
 
     .hero-actions {
@@ -174,6 +177,7 @@
       gap: 14px;
       flex-wrap: wrap;
       margin-bottom: 22px;
+      justify-content: center;
     }
 
     .btn {
@@ -213,6 +217,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
+      justify-content: center;
     }
 
     .pill {
@@ -265,8 +270,13 @@
       flex-direction: column;
     }
 
+    .product-card.featured {
+      border: 2px solid rgba(212,166,35,0.45);
+      transform: scale(1.03);
+    }
+
     .product-top {
-      padding: 22px 22px 12px;
+      padding: 22px;
       min-height: 170px;
       display: flex;
       align-items: center;
@@ -281,36 +291,6 @@
       max-height: 110px;
       width: auto;
       object-fit: contain;
-    }
-
-    .product-placeholder {
-      text-align: center;
-    }
-
-    .product-placeholder .icon {
-      width: 72px;
-      height: 72px;
-      margin: 0 auto 14px;
-      border-radius: 20px;
-      display: grid;
-      place-items: center;
-      font-size: 1.8rem;
-      font-weight: 900;
-      color: var(--white);
-    }
-
-    .icon-breeder {
-      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
-    }
-
-    .icon-club {
-      background: linear-gradient(135deg, var(--purple) 0%, var(--purple-dark) 100%);
-    }
-
-    .product-placeholder h3 {
-      margin: 0;
-      color: var(--navy);
-      font-size: 1.45rem;
     }
 
     .product-body {
@@ -454,6 +434,10 @@
       .hero {
         padding-top: 36px;
       }
+
+      .product-card.featured {
+        transform: none;
+      }
     }
 
     @media (max-width: 720px) {
@@ -492,13 +476,14 @@
   <header class="topbar">
     <div class="container topbar-inner">
       <div class="brand-mini">
-        <img src="RingMaster One Logo.png" alt="RingMaster One logo" />
+        <img src="RingMaster One Logo Transparent.png" alt="RingMaster One logo" />
       </div>
 
       <nav class="nav-links">
         <a href="#products">Products</a>
-        <a href="#ecosystem">Family</a>
+        <a href="#ecosystem">Ecosystem</a>
         <a href="#connect">Contact</a>
+        <a class="nav-cta" href="https://show.ringmasterone.com">Open Show</a>
       </nav>
     </div>
   </header>
@@ -508,12 +493,12 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <div class="eyebrow">The all-in-one platform for shows, clubs & breeders</div>
-          <img class="hero-logo" src="RingMaster One Logo.png" alt="RingMaster One" />
+          <img class="hero-logo" src="RingMaster One Logo Transparent.png" alt="RingMaster One" />
 
-          <h1>The All-in-one platform. for rabbit and cavy shows, clubs, and breeders.</h1>
+          <h1>The all-in-one platform for rabbit and cavy shows, clubs, and breeders.</h1>
           <p>
             RingMaster One brings together purpose-built tools for managing shows,
-            supporting breeders, and powering club operations — all under one connected brand.
+            supporting breeders, and powering club operations all under one connected brand.
           </p>
 
           <div class="hero-actions">
@@ -541,7 +526,7 @@
         </div>
 
         <div class="products">
-          <article class="product-card">
+          <article class="product-card featured">
             <div class="product-top">
               <img src="RingMaster Show Logo.png" alt="RingMaster Show logo" />
             </div>
@@ -564,10 +549,7 @@
 
           <article class="product-card">
             <div class="product-top">
-              <div class="product-placeholder">
-                <div class="icon icon-breeder">B</div>
-                <h3>RingMaster Breeder</h3>
-              </div>
+              <img src="RingMaster Breeder Logo Transparent.png" alt="RingMaster Breeder logo" />
             </div>
 
             <div class="product-body">
@@ -588,10 +570,7 @@
 
           <article class="product-card">
             <div class="product-top">
-              <div class="product-placeholder">
-                <div class="icon icon-club">C</div>
-                <h3>RingMaster Club</h3>
-              </div>
+              <img src="RingMaster Club Logo.png" alt="RingMaster Club logo" />
             </div>
 
             <div class="product-body">
@@ -667,7 +646,12 @@
               <p>
                 Follow development updates, feature announcements, and release news.
               </p>
-              <a class="product-link live" href="https://www.facebook.com/profile.php?id=61586420124814" target="_blank" rel="noopener noreferrer">
+              <a
+                class="product-link live"
+                href="https://www.facebook.com/profile.php?id=61586420124814"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 RingMaster One on Facebook
               </a>
             </div>
@@ -677,7 +661,7 @@
             <div class="product-body">
               <h3>Built by Hunter Interactive</h3>
               <p>
-                RingMaster One is part of the Hunter Interactive software built for the rabbit and cavy community.
+                RingMaster One is part of the Hunter Interactive software ecosystem built for the rabbit and cavy community.
               </p>
               <div class="product-link soon">More to Come</div>
             </div>
