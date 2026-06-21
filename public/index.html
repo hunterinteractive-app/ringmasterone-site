@@ -13,6 +13,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ringmasterone.com" />
   <meta property="og:image" content="RingMaster One Logo.png" />
+
   <style>
     :root {
       --navy: #11285a;
@@ -111,6 +112,57 @@
 
     .nav-links a:hover {
       color: var(--purple);
+    }
+
+    .nav-dropdown {
+      position: relative;
+    }
+
+    .nav-dropdown > a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--navy);
+      opacity: 0.92;
+    }
+
+    .nav-dropdown > a::after {
+      content: "▾";
+      font-size: 0.72rem;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 10px);
+      left: 0;
+      min-width: 245px;
+      background: var(--white);
+      border: 1px solid rgba(17, 40, 90, 0.12);
+      border-radius: 16px;
+      box-shadow: 0 18px 45px rgba(17, 40, 90, 0.14);
+      padding: 10px;
+      z-index: 200;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 10px;
+      white-space: nowrap;
+      font-size: 0.95rem;
+    }
+
+    .dropdown-menu a:hover {
+      background: rgba(76,35,148,0.08);
+      color: var(--purple);
+    }
+
+    .nav-dropdown:hover .dropdown-menu,
+    .nav-dropdown:focus-within .dropdown-menu {
+      display: block;
     }
 
     .nav-cta {
@@ -451,6 +503,16 @@
         gap: 14px;
       }
 
+      .dropdown-menu {
+        position: static;
+        margin-top: 8px;
+        min-width: 100%;
+      }
+
+      .nav-dropdown {
+        width: 100%;
+      }
+
       .hero-actions {
         flex-direction: column;
       }
@@ -472,6 +534,7 @@
     }
   </style>
 </head>
+
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
@@ -482,7 +545,15 @@
       <nav class="nav-links">
         <a href="#products">Products</a>
         <a href="show_pricing.html">Pricing</a>
-        <a href="help.html">Help</a>
+
+        <div class="nav-dropdown">
+          <a href="#">Help</a>
+          <div class="dropdown-menu">
+            <a href="help_exhibitors.html">Help for Exhibitors</a>
+            <a href="help_secretaries.html">Help for Show Secretaries</a>
+          </div>
+        </div>
+
         <a href="#connect">Contact</a>
         <a class="nav-cta" href="https://show.ringmasterone.com">Enter Show</a>
       </nav>
@@ -575,7 +646,7 @@
             </div>
 
             <div class="product-body">
-              <span class="badge badge-soon">Coming Soon</span>
+              <span class="badge badge-soon">In Development</span>
               <p>
                 Club-focused tools for member management, communication, administration, and organization support.
               </p>
@@ -586,7 +657,7 @@
                 <li>Organization management</li>
               </ul>
 
-              <div class="product-link soon">Coming Soon</div>
+              <div class="product-link soon">In Development</div>
             </div>
           </article>
         </div>
