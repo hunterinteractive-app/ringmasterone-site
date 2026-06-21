@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>RingMaster One Help Center</title>
+  <title>Help for Exhibitors | RingMaster One</title>
 
   <meta
     name="description"
-    content="RingMaster One Help Center with step-by-step guides for exhibitors, show secretaries, and clubs."
+    content="RingMaster One Help for Exhibitors with step-by-step guides for creating an account and using RingMaster Show."
   />
 
   <style>
@@ -31,6 +31,10 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -40,6 +44,11 @@
         radial-gradient(circle at top left, rgba(76,35,148,0.10), transparent 18%),
         linear-gradient(180deg, #f7f9fc 0%, #eef2f8 100%);
       line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
     }
 
     a {
@@ -70,6 +79,13 @@
       flex-wrap: wrap;
     }
 
+    .brand-mini {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
     .brand-mini img {
       width: 165px;
       max-width: 45vw;
@@ -81,15 +97,69 @@
       align-items: center;
       gap: 20px;
       flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
-    .nav-links a {
+    .nav-links a,
+    .nav-dropdown > a {
       font-weight: 700;
       color: var(--navy);
+      opacity: 0.92;
     }
 
-    .nav-links a:hover {
+    .nav-links a:hover,
+    .nav-dropdown > a:hover {
       color: var(--purple);
+    }
+
+    .nav-dropdown {
+      position: relative;
+    }
+
+    .nav-dropdown > a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    .nav-dropdown > a::after {
+      content: "▾";
+      font-size: 0.72rem;
+      line-height: 1;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 10px);
+      left: 0;
+      min-width: 245px;
+      background: var(--white);
+      border: 1px solid rgba(17, 40, 90, 0.12);
+      border-radius: 16px;
+      box-shadow: 0 18px 45px rgba(17, 40, 90, 0.14);
+      padding: 10px;
+      z-index: 200;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 10px;
+      color: var(--navy);
+      white-space: nowrap;
+      font-size: 0.95rem;
+    }
+
+    .dropdown-menu a:hover {
+      background: rgba(76,35,148,0.08);
+      color: var(--purple);
+    }
+
+    .nav-dropdown:hover .dropdown-menu,
+    .nav-dropdown:focus-within .dropdown-menu {
+      display: block;
     }
 
     .nav-cta {
@@ -147,13 +217,15 @@
 
     .help-card h2 {
       margin-top: 0;
+      margin-bottom: 10px;
       color: var(--navy);
       font-size: 2rem;
+      line-height: 1.15;
     }
 
     .help-card p {
       color: var(--muted);
-      margin-bottom: 24px;
+      margin: 0 0 24px;
     }
 
     iframe {
@@ -192,11 +264,27 @@
         align-items: flex-start;
       }
 
+      .nav-links {
+        justify-content: flex-start;
+        gap: 14px;
+      }
+
+      .dropdown-menu {
+        position: static;
+        margin-top: 8px;
+        min-width: 100%;
+      }
+
+      .nav-dropdown {
+        width: 100%;
+      }
+
       iframe {
         height: 700px;
       }
 
-      .help-card {
+      .help-card,
+      .footer-box {
         padding: 18px;
       }
     }
@@ -204,10 +292,8 @@
 </head>
 
 <body>
-
   <header class="topbar">
     <div class="container topbar-inner">
-
       <div class="brand-mini">
         <a href="index.html">
           <img src="RingMaster One Logo Transparent.png" alt="RingMaster One logo" />
@@ -217,40 +303,39 @@
       <nav class="nav-links">
         <a href="index.html#products">Products</a>
         <a href="show_pricing.html">Pricing</a>
-        <a href="help.html">Help</a>
+
+        <div class="nav-dropdown">
+          <a href="#">Help</a>
+          <div class="dropdown-menu">
+            <a href="help_exhibitors.html">Help for Exhibitors</a>
+            <a href="help_secretaries.html">Help for Show Secretaries</a>
+          </div>
+        </div>
+
         <a href="index.html#connect">Contact</a>
         <a class="nav-cta" href="https://show.ringmasterone.com">
           Enter Show
         </a>
       </nav>
-
     </div>
   </header>
 
   <main>
-
     <section class="hero">
       <div class="container">
+        <div class="eyebrow">RingMaster One Help Center</div>
 
-        <div class="eyebrow">
-          RingMaster One Help Center
-        </div>
-
-        <h1>Getting Started with RingMaster Show</h1>
+        <h1>Help for Exhibitors</h1>
 
         <p>
-          Step-by-step guides for exhibitors, show secretaries, clubs,
-          and staff using the RingMaster platform.
+          Step-by-step guides for exhibitors using RingMaster Show.
         </p>
-
       </div>
     </section>
 
     <section class="help-section">
       <div class="container">
-
         <div class="help-card">
-
           <h2>Create Your RingMaster Show Account</h2>
 
           <p>
@@ -263,18 +348,14 @@
             allow="fullscreen"
             style="min-height: 640px">
           </iframe>
-
         </div>
-
       </div>
     </section>
-
   </main>
 
   <footer class="footer">
     <div class="container">
       <div class="footer-box">
-
         <div>
           <div class="footer-brand">RingMaster One</div>
           <div>The all-in-one platform for shows, clubs & breeders.</div>
@@ -290,10 +371,8 @@
             </a>
           </div>
         </div>
-
       </div>
     </div>
   </footer>
-
 </body>
 </html>
