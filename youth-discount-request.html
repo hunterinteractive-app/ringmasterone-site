@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RingMaster One | Youth & 4-H Special Pricing</title>
+<meta name="description" content="Request special pricing for 4-H, youth-run, youth-only, or educational shows using RingMaster Show." />
+
+<style>
+:root{
+--navy:#11285a;
+--navy-dark:#0b1c43;
+--gold:#d4a623;
+--purple:#4c2394;
+--text:#1b2440;
+--muted:#5a6687;
+--bg:#eef2f8;
+--white:#ffffff;
+--line:rgba(17,40,90,.12);
+--shadow:0 18px 45px rgba(17,40,90,.12);
+--radius:22px;
+--max:1100px;
+--green:#1d6f42;
+--red:#9f1d1d;
+}
+
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+color:var(--text);
+background:
+radial-gradient(circle at top right,rgba(212,166,35,.12),transparent 20%),
+radial-gradient(circle at top left,rgba(76,35,148,.10),transparent 18%),
+linear-gradient(180deg,#f7f9fc 0%,#eef2f8 100%);
+line-height:1.6;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.container{
+width:min(var(--max),92%);
+margin:auto;
+}
+
+.promo-bar{
+background:linear-gradient(135deg,var(--purple),var(--navy));
+color:white;
+text-align:center;
+padding:12px 16px;
+font-weight:800;
+font-size:14px;
+}
+
+header{
+position:sticky;
+top:0;
+z-index:100;
+background:rgba(255,255,255,.9);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(17,40,90,.08);
+}
+
+.header-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+padding:14px 0;
+}
+
+.brand{
+font-weight:900;
+color:var(--navy);
+font-size:1.1rem;
+}
+
+.nav-links{
+display:flex;
+align-items:center;
+gap:20px;
+flex-wrap:wrap;
+justify-content:flex-end;
+}
+
+.nav-links a,
+.nav-dropdown > a{
+font-weight:700;
+color:var(--navy);
+opacity:.92;
+}
+
+.nav-links a:hover,
+.nav-dropdown > a:hover{
+color:var(--purple);
+}
+
+.nav-dropdown{
+position:relative;
+padding:10px 0;
+}
+
+.nav-dropdown > a{
+display:inline-flex;
+align-items:center;
+gap:6px;
+cursor:pointer;
+}
+
+.nav-dropdown > a::after{
+content:"▾";
+font-size:.72rem;
+}
+
+.dropdown-menu{
+display:none;
+position:absolute;
+top:100%;
+left:0;
+min-width:245px;
+background:var(--white);
+border:1px solid rgba(17,40,90,.12);
+border-radius:16px;
+box-shadow:0 18px 45px rgba(17,40,90,.14);
+padding:10px;
+z-index:200;
+}
+
+.dropdown-menu a{
+display:block;
+padding:10px 12px;
+border-radius:10px;
+white-space:nowrap;
+font-size:.95rem;
+}
+
+.dropdown-menu a:hover{
+background:rgba(76,35,148,.08);
+color:var(--purple);
+}
+
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu{
+display:block;
+}
+
+.nav-cta{
+background:linear-gradient(135deg,var(--navy),var(--navy-dark));
+color:white !important;
+padding:12px 18px;
+border-radius:999px;
+box-shadow:0 10px 20px rgba(17,40,90,.18);
+}
+
+.hero{
+padding:58px 0 28px;
+text-align:center;
+}
+
+.eyebrow{
+display:inline-block;
+padding:8px 14px;
+border-radius:999px;
+background:rgba(76,35,148,.08);
+color:var(--purple);
+font-weight:800;
+letter-spacing:.04em;
+font-size:.84rem;
+text-transform:uppercase;
+margin-bottom:18px;
+}
+
+.hero h1{
+font-size:clamp(2.35rem,5vw,4.2rem);
+line-height:1.04;
+margin:0 0 14px;
+color:var(--navy);
+}
+
+.hero p{
+color:var(--muted);
+max-width:790px;
+margin:auto;
+font-size:1.08rem;
+}
+
+.content{
+padding:34px 0 72px;
+}
+
+.layout{
+display:grid;
+grid-template-columns:310px minmax(0,1fr);
+gap:28px;
+align-items:start;
+}
+
+.info-card,
+.form-card{
+background:white;
+border:1px solid var(--line);
+border-radius:var(--radius);
+box-shadow:var(--shadow);
+}
+
+.info-card{
+padding:24px;
+position:sticky;
+top:92px;
+}
+
+.info-card h2,
+.form-card h2{
+margin:0 0 10px;
+color:var(--navy);
+}
+
+.info-card p{
+margin:0 0 16px;
+color:var(--muted);
+}
+
+.note{
+border-radius:16px;
+padding:14px;
+background:#fff8df;
+color:#7a560d;
+font-size:14px;
+border:1px solid rgba(212,166,35,.35);
+}
+
+.form-card{
+padding:28px;
+}
+
+.hint{
+margin:0;
+color:var(--muted);
+font-size:14px;
+}
+
+.section{
+padding:24px 0;
+border-top:1px solid var(--line);
+}
+
+.section:first-of-type{
+border-top:0;
+padding-top:0;
+}
+
+.section-title{
+font-size:18px;
+margin:0 0 16px;
+color:var(--navy);
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:18px;
+}
+
+.field{
+display:flex;
+flex-direction:column;
+gap:7px;
+}
+
+.field.full{
+grid-column:1 / -1;
+}
+
+label,
+legend{
+color:var(--navy);
+font-size:14px;
+font-weight:800;
+}
+
+input,
+select,
+textarea{
+width:100%;
+border:1px solid rgba(17,40,90,.22);
+border-radius:14px;
+padding:13px 14px;
+font:inherit;
+color:var(--text);
+background:white;
+}
+
+textarea{
+min-height:118px;
+resize:vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+outline:3px solid rgba(76,35,148,.14);
+border-color:var(--purple);
+}
+
+fieldset{
+margin:0;
+padding:0;
+border:0;
+}
+
+.choice-list{
+display:grid;
+gap:10px;
+margin-top:10px;
+}
+
+.choice{
+display:flex;
+gap:10px;
+align-items:flex-start;
+border:1px solid var(--line);
+border-radius:16px;
+padding:12px;
+background:#fbfcff;
+}
+
+.choice input{
+width:auto;
+margin-top:5px;
+}
+
+.choice strong{
+display:block;
+color:var(--navy);
+font-size:14px;
+}
+
+.choice span span{
+display:block;
+color:var(--muted);
+font-size:13px;
+}
+
+.terms{
+display:flex;
+gap:10px;
+align-items:flex-start;
+}
+
+.terms input{
+width:auto;
+margin-top:5px;
+}
+
+.actions{
+display:flex;
+align-items:center;
+gap:14px;
+flex-wrap:wrap;
+padding-top:18px;
+}
+
+button{
+background:linear-gradient(135deg,var(--navy),var(--navy-dark));
+color:white;
+border:0;
+border-radius:14px;
+padding:14px 22px;
+font-weight:900;
+cursor:pointer;
+font-size:15px;
+}
+
+button:disabled{
+cursor:wait;
+opacity:.72;
+}
+
+.required{
+color:var(--red);
+}
+
+.success,
+.error{
+display:none;
+border-radius:16px;
+margin-bottom:18px;
+padding:14px;
+font-size:14px;
+}
+
+.success{
+border:1px solid #b8dec8;
+color:#1d6f42;
+background:#edf8f2;
+}
+
+.error{
+border:1px solid #f1bbbb;
+color:#8f1f1f;
+background:#fff0f0;
+}
+
+.success.is-visible,
+.error.is-visible{
+display:block;
+}
+
+.hidden-field{
+position:absolute;
+left:-10000px;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+
+footer{
+padding:40px 0;
+text-align:center;
+color:var(--muted);
+}
+
+@media(max-width:850px){
+.header-inner{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.nav-links{
+justify-content:flex-start;
+gap:14px;
+}
+
+.dropdown-menu{
+position:static;
+margin-top:8px;
+min-width:100%;
+}
+
+.nav-dropdown{
+width:100%;
+}
+
+.layout{
+grid-template-columns:1fr;
+}
+
+.info-card{
+position:static;
+}
+}
+
+@media(max-width:620px){
+.grid{
+grid-template-columns:1fr;
+}
+
+.form-card{
+padding:22px 18px;
+}
+}
+</style>
+</head>
+
+<body>
+<div class="promo-bar">
+Special pricing may be available for youth-run, youth-only, 4-H, and educational shows.
+</div>
+
+<header>
+<div class="container header-inner">
+<a class="brand" href="index.html">RingMaster One</a>
+
+<nav class="nav-links">
+<a href="index.html">Home</a>
+<a href="show_pricing.html">Pricing</a>
+
+<div class="nav-dropdown">
+<a href="#">Help</a>
+<div class="dropdown-menu">
+<a href="help_exhibitors.html">Help for Exhibitors</a>
+<a href="help_secretaries.html">Help for Show Secretaries</a>
+</div>
+</div>
+
+<a href="mailto:support@ringmasterone.com">Support</a>
+<a class="nav-cta" href="https://show.ringmasterone.com">Enter Show</a>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero">
+<div class="container">
+<span class="eyebrow">Special Pricing Request</span>
+<h1>Youth &amp; 4-H Show Discount Request</h1>
+<p>
+RingMaster Show is committed to supporting the youth of our organization, as they will be the
+future leaders of the rabbit and cavy community. If you are hosting a 4-H, youth-run, youth-only,
+or educational show, submit the details below before purchasing tokens so we can review the event
+size, number of sanctions, payment method, and expected support needs.
+</p>
+</div>
+</section>
+
+<section class="content">
+<div class="container layout">
+<aside class="info-card">
+<h2>Before You Submit</h2>
+<p>
+Requests are reviewed case by case. Approval is not automatic, but we do our best to support youth programs when possible.
+</p>
+<div class="note">
+Discounted pricing must be approved before tokens are purchased and may not be applied retroactively.
+</div>
+</aside>
+
+<section class="form-card" aria-labelledby="form-title">
+<div id="formSuccess" class="success" role="status">
+Your request has been submitted. We will review the details and follow up by email.
+</div>
+<div id="formError" class="error" role="alert">
+The request could not be sent. Please try again in a few minutes.
+</div>
+
+<h2 id="form-title">Request Form</h2>
+<p class="hint">Fields marked with <span class="required">*</span> are required.</p>
+
+<form id="discountRequestForm" action="#" method="post">
+<div class="hidden-field" aria-hidden="true">
+<label for="website">Website</label>
+<input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+</div>
+
+<div class="section">
+<h3 class="section-title">Contact Information</h3>
+<div class="grid">
+<div class="field">
+<label for="contactName">Contact name <span class="required">*</span></label>
+<input id="contactName" name="contact_name" type="text" autocomplete="name" required>
+</div>
+<div class="field">
+<label for="organizationName">Organization or club name <span class="required">*</span></label>
+<input id="organizationName" name="organization_name" type="text" required>
+</div>
+<div class="field">
+<label for="email">Email <span class="required">*</span></label>
+<input id="email" name="email" type="email" autocomplete="email" required>
+</div>
+<div class="field">
+<label for="phone">Phone</label>
+<input id="phone" name="phone" type="tel" autocomplete="tel">
+</div>
+</div>
+</div>
+
+<div class="section">
+<h3 class="section-title">Event Details</h3>
+<div class="grid">
+<div class="field">
+<label for="eventName">Event name <span class="required">*</span></label>
+<input id="eventName" name="event_name" type="text" required>
+</div>
+<div class="field">
+<label for="eventDate">Event date <span class="required">*</span></label>
+<input id="eventDate" name="event_date" type="date" required>
+</div>
+<div class="field">
+<label for="eventType">Event type <span class="required">*</span></label>
+<select id="eventType" name="event_type" required>
+<option value="">Select one</option>
+<option>4-H show</option>
+<option>Youth-only show</option>
+<option>Youth-run show</option>
+<option>County fair show</option>
+<option>Educational show</option>
+<option>Other youth-focused event</option>
+</select>
+</div>
+<div class="field">
+<label for="estimatedEntries">Estimated number of entries <span class="required">*</span></label>
+<input id="estimatedEntries" name="estimated_entries" type="number" min="1" step="1" required>
+</div>
+<div class="field">
+<label for="showSanctions">Number of show sanctions <span class="required">*</span></label>
+<input id="showSanctions" name="show_sanctions" type="number" min="1" step="1" required>
+<p class="hint">For example: Open A, Open B, Youth A, specialty sanctions, etc.</p>
+</div>
+<div class="field">
+<label for="entryCloseDate">Entry close date</label>
+<input id="entryCloseDate" name="entry_close_date" type="date">
+</div>
+</div>
+</div>
+
+<div class="section">
+<h3 class="section-title">Payment Handling</h3>
+<fieldset>
+<legend>How will exhibitor payments be handled? <span class="required">*</span></legend>
+<p class="hint">This helps us estimate processing costs and the right discount structure.</p>
+<div class="choice-list">
+<label class="choice">
+<input type="radio" name="payment_method" value="Online payments through RingMaster Show" required>
+<span><strong>Online payments through RingMaster Show</strong><span>Exhibitors will pay online during entry checkout.</span></span>
+</label>
+<label class="choice">
+<input type="radio" name="payment_method" value="Pay at the show only">
+<span><strong>Pay at the show only</strong><span>RingMaster will track entries, but payments are collected separately.</span></span>
+</label>
+<label class="choice">
+<input type="radio" name="payment_method" value="Both online payments and pay at the show">
+<span><strong>Both online payments and pay at the show</strong><span>Some exhibitors may pay online and others may pay at the event.</span></span>
+</label>
+<label class="choice">
+<input type="radio" name="payment_method" value="Not sure yet">
+<span><strong>Not sure yet</strong><span>You are still deciding how payments will be collected.</span></span>
+</label>
+</div>
+</fieldset>
+</div>
+
+<div class="section">
+<h3 class="section-title">Request Details</h3>
+<div class="grid">
+<div class="field full">
+<label for="requestedDiscount">Requested discount or event budget</label>
+<textarea id="requestedDiscount" name="requested_discount" placeholder="Share what pricing support you are requesting or what budget the event is working within."></textarea>
+</div>
+<div class="field full">
+<label for="notes">Additional notes</label>
+<textarea id="notes" name="notes" placeholder="Include anything else that would help us review the request."></textarea>
+</div>
+</div>
+</div>
+
+<div class="section">
+<label class="terms">
+<input type="checkbox" name="approval_terms" required>
+<span>I understand that discounted pricing must be approved before purchasing tokens, may not be applied retroactively, and is not guaranteed. RingMaster Show will review the request and try to support the event in the best way possible. <span class="required">*</span></span>
+</label>
+
+<div class="actions">
+<button id="submitButton" type="submit">Submit Request</button>
+<p class="hint">Typical review time: 2-3 business days.</p>
+</div>
+</div>
+</form>
+</section>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container">
+<p>© 2026 RingMaster One • Powered by Hunter Interactive</p>
+</div>
+</footer>
+
+<script>
+const FUNCTION_URL = 'https://yzjoycrvqkyfrksmaixf.supabase.co/functions/v1/youth-discount-request';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl6am95Y3J2cWt5ZnJrc21haXhmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjgyNTY1MzcsImV4cCI6MjA4MzgzMjUzN30.pGpYESQo9lRngJ5eQmxly0xVO1P2YhHx--gB59p09w0';
+</script>
+<script>
+const form = document.getElementById('discountRequestForm');
+const success = document.getElementById('formSuccess');
+const error = document.getElementById('formError');
+const submitButton = document.getElementById('submitButton');
+
+function setMessage(type, message) {
+success.classList.remove('is-visible');
+error.classList.remove('is-visible');
+
+if (type === 'success') {
+success.textContent = message;
+success.classList.add('is-visible');
+success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+return;
+}
+
+error.textContent = message;
+error.classList.add('is-visible');
+error.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+form.addEventListener('submit', async function (event) {
+event.preventDefault();
+
+if (!form.reportValidity()) {
+return;
+}
+
+const formData = new FormData(form);
+const payload = Object.fromEntries(formData.entries());
+payload.approval_terms = formData.has('approval_terms');
+
+submitButton.disabled = true;
+submitButton.textContent = 'Sending...';
+success.classList.remove('is-visible');
+error.classList.remove('is-visible');
+
+try {
+const response = await fetch(FUNCTION_URL, {
+method: 'POST',
+headers: {
+'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+'apikey': SUPABASE_ANON_KEY,
+'Content-Type': 'application/json',
+},
+body: JSON.stringify(payload),
+});
+
+const result = await response.json().catch(() => ({}));
+
+if (!response.ok) {
+throw new Error(result.error || 'The request could not be sent.');
+}
+
+form.reset();
+setMessage('success', 'Your request has been submitted. We will review the details and follow up by email.');
+} catch (err) {
+setMessage('error', err.message || 'The request could not be sent. Please try again in a few minutes.');
+} finally {
+submitButton.disabled = false;
+submitButton.textContent = 'Submit Request';
+}
+});
+</script>
+</body>
+</html>
